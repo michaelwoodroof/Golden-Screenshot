@@ -22,9 +22,20 @@ class PaparazziButtonTest {
     )
 
     @Test
-    fun loginScreenSnapshot() {
+    fun loginScreenLightSnapshot() {
         paparazzi.snapshot {
             GoldenScreenshotTheme {
+                LoginScreen()
+            }
+        }
+    }
+
+    @Test
+    fun loginScreenDarkSnapshot() {
+        paparazzi.snapshot {
+            GoldenScreenshotTheme(
+                darkTheme = true,
+            ) {
                 LoginScreen()
             }
         }
