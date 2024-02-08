@@ -6,27 +6,27 @@ This repository contains code to run and perform golden screenshots utilising [P
 
 In order to run this project you will need to run the following commands
 
-```gradle annotate
+```YAML annotate
 # Runs tests and generates an HTML report at app/build/reports/paparazzi/ showing all test runs and snapshots.
 ./gradlew app:testDebug
 ```
 
-```gradle annotate
+```YAML annotate
 # Saves snapshots as golden values to a predefined source-controlled location (defaults to src/test/snapshots).
 ./gradlew app:recordPaparazziDebug
 ```
 
-```gradle annotate
+```YAML annotate
 # Runs tests and verifies against previously-recorded golden values. Failures generate diffs at sample/build/paparazzi/failures.
 ./gradlew app:verifyPaparazziDebug
 ```
 
-``` gradle annotate
+```YAML annotate
 # Installs Git LFS to project required to track the snapshots images taken
 git lfs install --local
 ```
 
-``` gradle annotate
+```YAML annotate
 # Installs Git LFS to project required to track the snapshots images taken
 git lfs install --local
 
