@@ -1,4 +1,4 @@
-package com.example.goldenscreenshot.ui.button
+package com.example.goldenscreenshot.ui.login
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.height
@@ -15,24 +15,28 @@ import com.example.goldenscreenshot.ui.theme.GoldenScreenshotTheme
 import org.junit.Rule
 import org.junit.Test
 
-class PaparazziButtonTest {
+class PaparazziLoginTest {
     @get:Rule
     val paparazzi = Paparazzi(
         deviceConfig = DeviceConfig.PIXEL_6_PRO,
     )
 
     @Test
-    fun buttonSnapshot() {
+    fun loginScreenLightSnapshot() {
         paparazzi.snapshot {
             GoldenScreenshotTheme {
-                Column(
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                ) {
-                    GoldenScreenShotButton(
-                        onClick = {},
-                        text = "Sample",
-                    )
-                }
+                LoginScreen()
+            }
+        }
+    }
+
+    @Test
+    fun loginScreenDarkSnapshot() {
+        paparazzi.snapshot {
+            GoldenScreenshotTheme(
+                darkTheme = true,
+            ) {
+                LoginScreen()
             }
         }
     }
