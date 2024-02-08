@@ -35,6 +35,7 @@ fun LoginScreen() {
             Header(text = stringResource(id = R.string.login_header))
             Spacer(modifier = Modifier.height(Padding.MEDIUM))
             Description(text = stringResource(id = R.string.login_description))
+            Description(text = "Sample 2")
             Spacer(modifier = Modifier.height(Padding.MEDIUM))
             GoldenScreenShotTextField(
                 value = "",
